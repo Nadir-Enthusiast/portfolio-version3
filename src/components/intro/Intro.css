@@ -1,26 +1,27 @@
 .intro {
-    height: 100vh;
+    top: 85px;
+    height: 105vh;
 }
 
 #f {
     width: 10px;
     position: absolute;
-    left: 34px;
-    top: 72px;
+    left: 64px;
+    top: 152px;
 }
 
 #s {
     width: 16px;
     position: absolute;
     left: 144px;
-    top: 71px;
+    top: 91px;
 }
 
 #t {
     width: 24px;
     position: absolute;
     left: 634px;
-    top: 128px;
+    top: 148px;
 }
 
 #fr {
@@ -33,96 +34,205 @@
 #fv {
     width: 14px;
     position: absolute;
-    left: 984px;
-    top: 139px;
+    right: 144px;
+    top: 179px;
 }
 
-.intro > .background > .star {
-    animation: shining;
-    animation-duration: 3s;
-    animation-timing-function: cubic-bezier(0.01, 0.02, 0.03, 1);
-    animation-iteration-count: infinite;
-}
-
-@keyframes shining {
-    100% {
-        transform: scale(3);
-        filter: brightness(140%);
-    }
-}
-
-.intro > .background > .bhole {
-    width: 90px;
+#str1 {
+    width: 24px;
     position: absolute;
-    left: 170px;
-    top: 160px;
-    animation: circling;
-    animation-duration: 0.5s;
+    left: 444px;
+    top: 179px;
+    z-index: 2;
+    animation-duration: 4s;
+}
+
+#str2 {
+    width: 28px;
+    position: absolute;
+    right: 344px;
+    top: 79px;
+    z-index: 3;
+    animation-duration: 6s;
+}
+
+#str3 {
+    width: 27px;
+    position: absolute;
+    right: 180px;
+    top: 679px;
+    z-index: 3;
+    animation-duration: 5.5s;
+}
+
+#str4 {
+    width: 36px;
+    position: absolute;
+    left: 195px;
+    top: 770px;
+    z-index: 3;
+    animation-duration: 9s;
+}
+
+#str5 {
+    width: 20px;
+    position: absolute;
+    right: 544px;
+    top: 279px;
+    z-index: 2;
+    animation-duration: 4s;
+}
+
+.intro > .background > .str {
+    animation: shining;
+    animation-duration: 1s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
 
-.intro > .background > .galaxy {
-    width: 75px;
+@keyframes lightens {
+    100% {
+        transform: scale(3);
+        box-shadow: 15px 13px 117px 15px rgba(255,255,47,1), 0px 0px 100px 0px rgb(58, 58, 0) inset;
+    }
+}
+
+.intro > .background > .star {
+    animation: lightens;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shining {
+    0% {
+        transform: scale(1);
+        filter: brightness(100%);
+    }
+    50% {
+        transform: scale(3);
+        filter: brightness(140%);
+    }
+    100% {
+        transform: scale(1);
+        filter: brightness(100%);
+    }
+}
+
+.intro > .background > .bhole {
+    width: 200px;
     position: absolute;
-    left: 540px;
-    top: 160px;
-    rotate: 45deg;
+    left: 170px;
+    top: 120px;
+    filter: brightness(200%);
+    animation: circling;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    z-index: 2;
+}
+
+.intro > .background > .galaxy {
+    width: 605px;
+    position: absolute;
+    right: 100px;
+    top: 200px;
+    rotate: 15deg;
+    animation: rotating;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.intro > .background > .earth {
+    width: 260px;
+    position: absolute;
+    left: 980px;
+    top: 300px;
+}
+
+.intro > .background > .sun {
+    width: 60px;
+    position: absolute;
+    right: 190px;
+    top: 250px;
+    animation: circling;
+    animation-duration: 21s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes circling {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
+.intro > .background > .space-ship {
+    width: 250px;
+    position: relative;
+    left: 900px;
+    top: 250px;
+    transform: rotate(-60deg);
+}
+
+.floating {
     animation: floating;
     animation-duration: 4s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
 
-.intro > .background > .sun {
-    width: 200px;
-    position: absolute;
-    left: 980px;
-    top: 300px;
-    animation: circling;
-    animation-duration: 25s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-}
-
-@keyframes circling {
-    100% {rotate: 360deg;}
-}
-
-.intro > .background > .space-ship {
-    width: 250px;
-    position: absolute;
-    left: 900px;
-    top: 250px;
-    rotate: -60deg;
-    animation: floating;
-    animation-duration: 9s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-}
-
 @keyframes floating {
     0% {
-        transform: translate(0%, 0%);
+        left: 900px;
+        top: 250px;
     }
     25% {
-        transform: translate(24%, 21%);
+        left: 914px;
+        top: 225px;
     }
     50% {
-        transform: translate(-22%, 16%);
+        left: 891px;
+        top: 217px;
     }
     75% {
-        transform: translate(-14%, -21%);
+        left: 908px;
+        top: 241px;
     }
-    90% {
-        transform: translate(12%, -16%);
+    100% {
+        left: 900px;
+        top: 250px;
     }
 
 }
 
 .intro > .background {
-    height: 100vh;
+    height: 105vh;
     background: url('./intro.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.intro > .title {
+    position: absolute;
+    top: 400px;
+    left: 180px;
+    height: 400px;
+    width: 400px;
+    background-color: transparent;
+}
+
+.title-text > h1 {
+    color: white;
+    text-shadow: 4px 4px 7px #00ffee;
+}
+
+.title-text > h1 > span {
+    text-shadow: 4px 4px 7px blue;
+}
+
+.title-text > p {
+    font-size: 19px;
+    color: white;
+    text-shadow: 4px 4px 7px #ff00e6;
 }
