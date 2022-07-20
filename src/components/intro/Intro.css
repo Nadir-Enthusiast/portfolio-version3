@@ -1,0 +1,128 @@
+.intro {
+    height: 100vh;
+}
+
+#f {
+    width: 10px;
+    position: absolute;
+    left: 34px;
+    top: 72px;
+}
+
+#s {
+    width: 16px;
+    position: absolute;
+    left: 144px;
+    top: 71px;
+}
+
+#t {
+    width: 24px;
+    position: absolute;
+    left: 634px;
+    top: 128px;
+}
+
+#fr {
+    width: 19px;
+    position: absolute;
+    left: 840px;
+    top: 90px;
+}
+
+#fv {
+    width: 14px;
+    position: absolute;
+    left: 984px;
+    top: 139px;
+}
+
+.intro > .background > .star {
+    animation: shining;
+    animation-duration: 3s;
+    animation-timing-function: cubic-bezier(0.01, 0.02, 0.03, 1);
+    animation-iteration-count: infinite;
+}
+
+@keyframes shining {
+    100% {
+        transform: scale(3);
+        filter: brightness(140%);
+    }
+}
+
+.intro > .background > .bhole {
+    width: 90px;
+    position: absolute;
+    left: 170px;
+    top: 160px;
+    animation: circling;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.intro > .background > .galaxy {
+    width: 75px;
+    position: absolute;
+    left: 540px;
+    top: 160px;
+    rotate: 45deg;
+    animation: floating;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.intro > .background > .sun {
+    width: 200px;
+    position: absolute;
+    left: 980px;
+    top: 300px;
+    animation: circling;
+    animation-duration: 25s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes circling {
+    100% {rotate: 360deg;}
+}
+
+.intro > .background > .space-ship {
+    width: 250px;
+    position: absolute;
+    left: 900px;
+    top: 250px;
+    rotate: -60deg;
+    animation: floating;
+    animation-duration: 9s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes floating {
+    0% {
+        transform: translate(0%, 0%);
+    }
+    25% {
+        transform: translate(24%, 21%);
+    }
+    50% {
+        transform: translate(-22%, 16%);
+    }
+    75% {
+        transform: translate(-14%, -21%);
+    }
+    90% {
+        transform: translate(12%, -16%);
+    }
+
+}
+
+.intro > .background {
+    height: 100vh;
+    background: url('./intro.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
