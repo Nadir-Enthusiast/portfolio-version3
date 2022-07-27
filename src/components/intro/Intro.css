@@ -1,84 +1,84 @@
 .intro {
-    top: 85px;
     height: 105vh;
+    position: relative;
 }
 
 #f {
-    width: 10px;
+    width: 1vh;
     position: absolute;
-    left: 64px;
-    top: 152px;
+    left: 6.4vh;
+    top: 17.2vh;
 }
 
 #s {
-    width: 16px;
+    width: 2.6vh;
     position: absolute;
-    left: 144px;
-    top: 91px;
+    left: 16.4vh;
+    top: 11.1vh;
 }
 
 #t {
-    width: 24px;
+    width: 2.4vh;
     position: absolute;
-    left: 634px;
-    top: 148px;
+    left: 63.4vh;
+    top: 14.8vh;
 }
 
 #fr {
-    width: 19px;
+    width: 1.9vh;
     position: absolute;
-    left: 840px;
-    top: 90px;
+    left: 84vh;
+    top: 19vh;
 }
 
 #fv {
-    width: 14px;
+    width: 1.4vh;
     position: absolute;
-    right: 144px;
-    top: 179px;
+    right: 14.4vh;
+    top: 17.9vh;
 }
 
 #str1 {
-    width: 24px;
+    width: 2.4vh;
     position: absolute;
-    left: 444px;
-    top: 179px;
+    left: 54.4vh;
+    top: 17.9vh;
     z-index: 2;
     animation-duration: 4s;
 }
 
 #str2 {
-    width: 28px;
+    width: 2.8vh;
     position: absolute;
-    right: 344px;
-    top: 79px;
+    right: 34.4vh;
+    top: 14.9vh;
     z-index: 3;
     animation-duration: 6s;
 }
 
 #str3 {
-    width: 27px;
+    width: 2.7vh;
     position: absolute;
-    right: 180px;
-    top: 679px;
+    right: 18vh;
+    top: 67.9vh;
     z-index: 3;
     animation-duration: 5.5s;
 }
 
 #str4 {
-    width: 36px;
+    width: 3.6vh;
     position: absolute;
-    left: 195px;
-    top: 770px;
+    left: 16.5vh;
+    top: 77vh;
     z-index: 3;
     animation-duration: 9s;
 }
 
 #str5 {
-    width: 20px;
+    width: 2vh;
     position: absolute;
-    right: 544px;
-    top: 279px;
+    right: 54.4vh;
+    top: 27.9vh;
     z-index: 2;
     animation-duration: 4s;
 }
@@ -120,10 +120,10 @@
 }
 
 .intro > .background > .bhole {
-    width: 200px;
+    width: 24vh;
     position: absolute;
-    left: 170px;
-    top: 120px;
+    left: 21vh;
+    top: 16vh;
     filter: brightness(200%);
     animation: circling;
     animation-duration: 10s;
@@ -133,11 +133,11 @@
 }
 
 .intro > .background > .galaxy {
-    width: 605px;
+    width: 86.5vh;
     position: absolute;
-    right: 100px;
-    top: 200px;
-    rotate: 15deg;
+    right: 10vh;
+    top: 20vh;
+    transform: rotate(12deg);
     animation: rotating;
     animation-duration: 4s;
     animation-timing-function: linear;
@@ -145,17 +145,17 @@
 }
 
 .intro > .background > .earth {
-    width: 260px;
+    width: 26vh;
     position: absolute;
-    left: 980px;
-    top: 300px;
+    left: 132vh;
+    top: 38vh;
 }
 
 .intro > .background > .sun {
-    width: 60px;
+    width: 8vh;
     position: absolute;
-    right: 190px;
-    top: 250px;
+    right: 23vh;
+    top: 29vh;
     animation: circling;
     animation-duration: 21s;
     animation-timing-function: linear;
@@ -168,10 +168,10 @@
 }
 
 .intro > .background > .space-ship {
-    width: 250px;
-    position: relative;
-    left: 900px;
-    top: 250px;
+    width: 28vh;
+    position: absolute;
+    left: 97vh;
+    top: 28vh;
     transform: rotate(-60deg);
 }
 
@@ -184,24 +184,24 @@
 
 @keyframes floating {
     0% {
-        left: 900px;
-        top: 250px;
+        left: 97vh;
+        top: 28vh;
     }
     25% {
-        left: 914px;
-        top: 225px;
+        left: 98.4vh;
+        top: 25.5vh;
     }
     50% {
-        left: 891px;
-        top: 217px;
+        left: 96.1vh;
+        top: 24.7vh;
     }
     75% {
-        left: 908px;
-        top: 241px;
+        left: 97.8vh;
+        top: 27.1vh;
     }
     100% {
-        left: 900px;
-        top: 250px;
+        left: 97vh;
+        top: 28vh;
     }
 
 }
@@ -215,24 +215,26 @@
 
 .intro > .title {
     position: absolute;
-    top: 400px;
-    left: 180px;
-    height: 400px;
-    width: 400px;
+    top: 47vh;
+    left: 25vh;
+    height: 44vh;
+    width: 44vh;
     background-color: transparent;
 }
 
 .title-text > h1 {
+    font-size: 6vh;
     color: white;
-    text-shadow: 4px 4px 7px #00ffee;
+    text-shadow: 0.7vh 0.7vh 1.4vh #00ffee;
 }
 
 .title-text > h1 > span {
-    text-shadow: 4px 4px 7px blue;
+    font-size: 6vh;
+    text-shadow: 0.7vh 0.7vh 1.4vh blue;
 }
 
 .title-text > p {
-    font-size: 19px;
+    font-size: 2.6vh;
     color: white;
-    text-shadow: 4px 4px 7px #ff00e6;
+    text-shadow: 0.7vh 0.7vh 1.4vh #ff00e6;
 }

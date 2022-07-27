@@ -58,7 +58,7 @@ function Intro() {
   }
 
   return (
-    <div className='intro'>
+    <div className='intro' id='about'>
       <div className="background">
         <img className='star' id='f' src={star} alt='' />
         <img className='star' id='s' src={star} alt='' />

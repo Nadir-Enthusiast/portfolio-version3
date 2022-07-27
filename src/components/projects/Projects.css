@@ -1,0 +1,103 @@
+:root {
+    --grid-column: 340px;
+    --grid-row: 200px;
+}
+
+.projects {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+.project-background {
+    position: absolute;
+}
+
+.project-background > video {
+    width: 100vw;
+    height: fit-content;
+    z-index: -1;
+}
+
+.projects > .title-con {
+    position: absolute;
+    top: 25vh;
+    width: 100vw;
+    text-align: center;
+    font-size: 5.6vh;
+    color: white;
+    animation: fade;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+}
+
+.projects > .title-con > h1 {
+    font-size: 5vh;
+}
+
+@keyframes fade {
+    0% { text-shadow: 4px 4px 10px rgb(26, 255, 0), -4px -4px 10px yellow; }
+    20% { text-shadow: 8px 8px 20px yellow, -8px -8px 20px rgb(26, 255, 0); }
+    40% { text-shadow: 4px 4px 10px rgb(0, 255, 204), -4px -4px 10px rgb(255, 0, 251); }
+    60% { text-shadow: 8px 8px 20px rgb(255, 0, 251), -8px -8px 20px rgb(0, 255, 204); }
+    80% { text-shadow: 4px 4px 10px rgb(204, 0, 255), -4px -4px 10px rgb(35, 64, 85); }
+    100% { text-shadow: 8px 8px 20px rgb(95, 114, 255), -8px -8px 20px rgb(234, 255, 100); }
+}
+
+.overlay {
+  position: absolute;
+  bottom: 100%;
+  background-color: #ffffff;
+  overflow: hidden;
+  width: 40vh;
+  height:0;
+  transition: .25s ease;
+}
+
+.overlay > a > img {
+    width: 4vh;
+}
+
+.projects > .project-body > .projects-content {
+    position: absolute;
+    top: 36vh;
+    left: 14vh;
+    display: flex;
+    flex-direction: row;
+    /*
+    display: grid;
+    grid-template-columns: var(--grid-column) var(--grid-column) var(--grid-column);
+    grid-template-rows: var(--grid-row) var(--grid-row) var(--grid-row);
+    gap: 20px;
+    */
+    background-color: transparent;
+    padding: 1vw;
+    z-index: 10;
+}
+
+.projects > .project-body > .projects-content > .project-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 0.1vh solid rgba(0, 0, 0, 0.8);
+    font-size: 4vh;
+    text-align: center;
+    margin: 0 6vh;
+}
+
+.projects-content > div:hover #ecp {
+    bottom: 0;
+    height: 100%;
+}
+
+.projects-content > div:hover #sma {
+    bottom: 0;
+    height: 100%;
+}
+
+.projects-content > div:hover #gca {
+    bottom: 0;
+    height: 100%;
+}
+
+.projects > .project-body > .projects-content > .project-item > .overlay > a {
+    text-decoration: none;
+}
