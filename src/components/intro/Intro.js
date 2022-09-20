@@ -9,9 +9,6 @@ import earth from './earth.svg'
 import str from './str.svg'
 
 import { useState, useEffect } from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import { ArrowRightCircle } from 'react-bootstrap-icons';
-import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
 function Intro() {
@@ -76,15 +73,13 @@ function Intro() {
         <img className='space-ship floating' src={spaceship} alt='' />
         <img className='sun' src={sun} alt='' />
       </div>
-      <div className="title">
-        <TrackVisibility>
+        <TrackVisibility className="title">
           {({ isVisible }) =>
           <div className='title-text'>
             <h1>{`Hi! I'm Nadir,`} <span className="txt-rotate" dataPeriod="500" data-rotate='[ "Web Developer", "Full Stack Developer", "Software Developer" ]'><span className="wrap">{text}</span></span></h1>
             <p>I have experience in building web application with React, Front-End libraries, Express, Node. Scroll down to learn more about me.</p>
           </div>}
         </TrackVisibility>
-      </div>
     </div>
   )
 }
