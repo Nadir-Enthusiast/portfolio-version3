@@ -1,7 +1,61 @@
+/* ----------------- animations -------------------- */
+
+@keyframes lightens {
+    100% {
+        transform: scale(3);
+        box-shadow: 15px 13px 117px 15px rgba(255,255,47,1), 0px 0px 100px 0px rgb(58, 58, 0) inset;
+    }
+}
+
+@keyframes shining {
+    0% {
+        transform: scale(1);
+        filter: brightness(100%);
+    }
+    50% {
+        transform: scale(3);
+        filter: brightness(140%);
+    }
+    100% {
+        transform: scale(1);
+        filter: brightness(100%);
+    }
+}
+
+@keyframes circling {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
+@keyframes floating {
+    0% {
+        left: 97vh;
+        top: 28vh;
+    }
+    25% {
+        left: 98.4vh;
+        top: 25.5vh;
+    }
+    50% {
+        left: 96.1vh;
+        top: 24.7vh;
+    }
+    75% {
+        left: 97.8vh;
+        top: 27.1vh;
+    }
+    100% {
+        left: 97vh;
+        top: 28vh;
+    }
+}
+
 .intro {
     height: 105vh;
     position: relative;
 }
+
+/* Type 1 stars */
 
 #f {
     width: 1vh;
@@ -37,6 +91,43 @@
     right: 14.4vh;
     top: 17.9vh;
 }
+
+@media screen and (min-width: 767px) {
+    #f {
+        width: 3vh;
+        left: 3.4vh;
+        top: 7.2vh;
+    }
+    
+    #s {
+        width: 4.6vh;
+        left: 6.4vh;
+        top: 14.1vh;
+    }
+    
+    #t {
+        width: 2.4vh;
+        position: absolute;
+        left: 63.4vh;
+        top: 14.8vh;
+    }
+    
+    #fr {
+        width: 1.9vh;
+        position: absolute;
+        left: 84vh;
+        top: 19vh;
+    }
+    
+    #fv {
+        width: 1.4vh;
+        position: absolute;
+        right: 14.4vh;
+        top: 17.9vh;
+    }
+}
+
+/* Type 2 stars */
 
 #str1 {
     width: 2.4vh;
@@ -90,12 +181,7 @@
     animation-iteration-count: infinite;
 }
 
-@keyframes lightens {
-    100% {
-        transform: scale(3);
-        box-shadow: 15px 13px 117px 15px rgba(255,255,47,1), 0px 0px 100px 0px rgb(58, 58, 0) inset;
-    }
-}
+
 
 .intro > .background > .star {
     animation: lightens;
@@ -104,20 +190,7 @@
     animation-iteration-count: infinite;
 }
 
-@keyframes shining {
-    0% {
-        transform: scale(1);
-        filter: brightness(100%);
-    }
-    50% {
-        transform: scale(3);
-        filter: brightness(140%);
-    }
-    100% {
-        transform: scale(1);
-        filter: brightness(100%);
-    }
-}
+/*------------------ objects ----------------*/
 
 .intro > .background > .bhole {
     width: 24vh;
@@ -162,17 +235,45 @@
     animation-iteration-count: infinite;
 }
 
-@keyframes circling {
-    0% {transform: rotate(0deg);}
-    100% {transform: rotate(360deg);}
-}
-
 .intro > .background > .space-ship {
     width: 28vh;
     position: absolute;
     left: 97vh;
     top: 28vh;
     transform: rotate(-60deg);
+}
+
+@media screen and (max-width: 767px) {
+    .intro > .background > .bhole {
+        width: 17vh;
+        left: 6vh;
+        top: 19vh;
+    }
+    
+    .intro > .background > .galaxy {
+        width: 34.5vh;
+        left: 10vh;
+        top: 20vh;
+    }
+    
+    .intro > .background > .earth {
+        width: 16vh;
+        left: 12vh;
+        top: 78vh;
+    }
+    
+    .intro > .background > .sun {
+        width: 8vh;
+        right: 13vh;
+        top: 69vh;
+    }
+
+    .intro > .background > .space-ship {
+        width: 18vh;
+        right: 57vh;
+        top: 78vh;
+        transform: rotate(-60deg);
+    }
 }
 
 .floating {
@@ -182,36 +283,15 @@
     animation-iteration-count: infinite;
 }
 
-@keyframes floating {
-    0% {
-        left: 97vh;
-        top: 28vh;
-    }
-    25% {
-        left: 98.4vh;
-        top: 25.5vh;
-    }
-    50% {
-        left: 96.1vh;
-        top: 24.7vh;
-    }
-    75% {
-        left: 97.8vh;
-        top: 27.1vh;
-    }
-    100% {
-        left: 97vh;
-        top: 28vh;
-    }
-
-}
-
 .intro > .background {
     height: 105vh;
     background: url('./intro.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+
+/*-------------------- text  ---------------------*/
 
 .intro > .title {
     position: absolute;
@@ -237,4 +317,25 @@
     font-size: 2.6vh;
     color: white;
     text-shadow: 0.7vh 0.7vh 1.4vh #ff00e6;
+}
+
+@media screen and (max-width: 767px) {
+    .intro > .title {
+        top: 37vh;
+        left: 5vh;
+        height: 34vh;
+        width: 26vh;
+    }
+    
+    .title-text > h1 {
+        font-size: 4vh;
+    }
+    
+    .title-text > h1 > span {
+        font-size: 3.5vh;
+    }
+    
+    .title-text > p {
+        font-size: 2vh;
+    }
 }
